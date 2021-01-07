@@ -135,9 +135,8 @@ export const getPossibleUpgrades = (
       // If the current version is a pre-release or already higher than latest, then we ignore the latest tag.
       // Otherwise, remove all versions higher than the latest tag
       return (
-        currentVersionIsPrerelease === true ||
-        gt(coercedVersion, latest) ||
-        lte(version.version, latest)
+        // currentVersionIsPrerelease === true ||
+        gt(coercedVersion, latest) || lte(version.version, latest)
       )
     })
 
